@@ -19,7 +19,6 @@ section{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-   
     padding: 10px;
 }
 
@@ -35,35 +34,29 @@ section{
 
 /* lines */
 
-#left-line, #top-left-dot, #bottom-left-dot {
+.left-line, .top-left-dot, .bottom-left-dot {
     background-color: aquamarine;
     width: 8px;
 }
 
-#right-line, #top-right-dot, #bottom-right-dot {
+.right-line, .top-right-dot, .bottom-right-dot {
     background-color: aquamarine;
     width: 8px;
 }
 
-#top-line, #bottom-line {
+.top-line, .bottom-line {
     height: 8px;
     background-color: aquamarine;
 }
 
-#square {
+.square {
     width: 70px;
     height: 70px;
 }
 
 /* dots */
 
-.cell{
-     width: 100%;
-    background-color: #bbb;
-    display: inline-block;
-  }
-
-  #bottom-right-dot, #bottom-left-dot,  #top-right-dot, #top-left-dot {
+  .bottom-right-dot, .bottom-left-dot,  .top-right-dot, .top-left-dot {
     border-radius: 50%;
     background-color: pink;
   }
