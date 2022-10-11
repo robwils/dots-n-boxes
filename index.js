@@ -1,13 +1,16 @@
 console.log("connected");
 
-const cells = document.querySelectorAll(".cell");
+const lines = document.querySelectorAll(".line");
+const state = [];
+console.log(lines);
 
-console.log(cells);
-
-cells.forEach((element) => {
+lines.forEach((element) => {
+  state.push({ element: element });
   element.addEventListener("click", cellClicked);
 });
 
-function cellClicked(e) {
+console.log(state);
+
+function cellClicked(event) {
   console.log("clicked");
 }
