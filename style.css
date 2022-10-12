@@ -32,6 +32,12 @@ section{
     padding: 0px;
 }
 
+/* cells */
+
+.cell{
+    font-size: 7px;
+}
+
 /* lines */
 
 .left-line, .top-left-dot, .bottom-left-dot {

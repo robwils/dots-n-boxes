@@ -5,6 +5,16 @@ const reset = document.querySelector(".reset");
 const lines = document.querySelectorAll(".line");
 const squares = document.querySelectorAll(".square");
 
+// Define objects
+class Box {
+  constructor(leftLine, topLine, rightLine, bottomLine) {
+    this.leftLine = leftLine;
+    this.topLine = topLine;
+    this.rightLine = rightLine;
+    this.bottomLine = bottomLine;
+  }
+}
+
 reset.addEventListener("click", () => {
   console.log("reset");
 });
