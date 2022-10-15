@@ -1,5 +1,5 @@
-console.log("connected");
-
+import boxArray from "./modules/boxArray.js";
+import { squares } from "./modules/boxData.js";
 // create prototype box object
 // create array of box objects and export as module
 // objects should have methods to:
@@ -19,29 +19,8 @@ console.log("connected");
 // define UI variables
 const reset = document.querySelector(".reset");
 const lines = document.querySelectorAll(".line");
-const squares = document.querySelectorAll(".square");
-const square1 = document.querySelectorAll(".box-1");
 
-// define box class
-class Box {
-  constructor(leftLine, topLine, rightLine, bottomLine) {
-    this.leftLine = leftLine;
-    this.topLine = topLine;
-    this.rightLine = rightLine;
-    this.bottomLine = bottomLine;
-  }
-}
-
-console.log(square1.item(2).classList[2]);
-
-const box1 = new Box(
-  square1.item(1).id,
-  square1.item(0).id,
-  square1.item(2).id,
-  square1.item(3).id
-);
-
-console.log(box1);
+console.log(boxArray);
 
 // reset
 reset.addEventListener("click", () => {
