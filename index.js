@@ -1,5 +1,5 @@
 import boxArray from "./modules/boxArray.js";
-import { squares } from "./modules/boxData.js";
+import { square1 } from "./modules/boxData.js";
 // create prototype box object
 // create array of box objects and export as module
 // objects should have methods to:
@@ -20,21 +20,20 @@ import { squares } from "./modules/boxData.js";
 const reset = document.querySelector(".reset");
 const lines = document.querySelectorAll(".line");
 
-console.log(boxArray);
-
 // reset
 reset.addEventListener("click", () => {
   console.log("reset");
 });
 
+// line status
+const lineStatus = [];
+
 lines.forEach((element) => {
   element.addEventListener("click", () => {
-    console.log(`${element.id} clicked`);
+    element.classList.add("clicked");
+    console.log(boxArray[0].isClicked());
   });
 });
 
-squares.forEach((element) => {
-  element.addEventListener("click", () => {
-    console.log(`${element.id} clicked`);
-  });
-});
+console.log(square1);
+console.log(boxArray);
