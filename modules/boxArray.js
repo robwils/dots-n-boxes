@@ -1,5 +1,4 @@
 import {
-  squares,
   square1,
   square2,
   square3,
@@ -17,6 +16,8 @@ import {
   square15,
   square16,
 } from "./boxData.js";
+import currentPlayer from "../index.js";
+import { score } from "./updateScore.js";
 
 // define box class
 class Box {
@@ -27,6 +28,7 @@ class Box {
     this.rightLine = rightLine;
     this.bottomLine = bottomLine;
     this.square = square;
+    this.player;
   }
   isClicked = function () {
     if (
@@ -37,6 +39,9 @@ class Box {
     ) {
       console.log(`${this.squareName}: boxClosed`);
       this.square.classList.add("clicked");
+      this.player = currentPlayer;
+      console.log(this.player);
+
       return;
     } else {
       return "boxOpen";
@@ -208,4 +213,4 @@ const box16 = new Box(
 );
 boxArray.push(box16);
 
-export default boxArray;
+export { boxArray, score, currentPlayer };

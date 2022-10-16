@@ -1,11 +1,13 @@
-import boxArray from "./modules/boxArray.js";
+import { boxArray, score } from "./modules/boxArray.js";
 import { square1 } from "./modules/boxData.js";
+import { updatePlayer, currentPlayer } from "./modules/updatePlayer.js";
 // create prototype box object
 // create array of box objects and export as module
 // objects should have methods to:
 // -- determine if the box is won
 // -- if box is won gray it out
 // -- who was the user who won
+// if you complete a box get another turn
 
 // create array of unclicked lines?
 
@@ -49,8 +51,13 @@ lines.forEach((element) => {
   element.addEventListener("click", () => {
     element.classList.add("clicked");
     boxesClicked();
+    score.rounds++;
+    console.log(score.rounds);
+    updatePlayer();
   });
 });
 
 console.log(square1);
 console.log(boxArray);
+
+export default currentPlayer;
