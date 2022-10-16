@@ -6,13 +6,13 @@ section{
 }
 
 .outter--container {
-    background-color: powderblue;
+    background-color: white;
     width: 100%;
     height: 340px;
     position: relative;
 }
 .game--container {
-    background-color: bisque;
+    background-color: white;
     width: 320px;
     height: 320px;
     position: absolute;
@@ -24,7 +24,7 @@ section{
 
 .box--container {
     display: grid;
-    background-color: cadetblue;
+    background-color: white;
     grid-template-columns: repeat(9, auto);
     grid-template-rows: repeat(9, auto);
     width: 320px;
@@ -35,7 +35,7 @@ section{
 /* cells */
 
 .cell{
-    font-size: 7px;
+    font-size:5px;
 }
 
 .cell.clicked{
@@ -47,18 +47,18 @@ section{
 /* lines */
 
 .left-line, .top-left-dot {
-    background-color: aquamarine;
+    background-color: white;
     width: 8px;
 }
 
 .right-line, .top-right-dot, .bottom-right-dot {
-    background-color: aquamarine;
+    background-color: white;
     width: 8px;
 }
 
 .top-line, .bottom-line {
     height: 8px;
-    background-color: aquamarine;
+    background-color: white;
 }
 
 .square {
@@ -67,7 +67,7 @@ section{
 }
 
 .square.clicked {
-    background-color: blueviolet;
+    background-color: lightblue;
 }
 
 
@@ -75,5 +75,5 @@ section{
 
   .bottom-right-dot, .bottom-left-dot,  .top-right-dot, .top-left-dot {
     border-radius: 50%;
-    background-color: pink;
-  }
+    background-color: black;
+      }
