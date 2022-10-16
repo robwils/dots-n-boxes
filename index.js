@@ -25,15 +25,31 @@ reset.addEventListener("click", () => {
   console.log("reset");
 });
 
+// check all boxes
+let boxesClicked = () => {
+  boxArray[0].isClicked();
+  boxArray[1].isClicked();
+  boxArray[2].isClicked();
+  boxArray[3].isClicked();
+  boxArray[4].isClicked();
+  boxArray[5].isClicked();
+  boxArray[6].isClicked();
+  boxArray[7].isClicked();
+  boxArray[8].isClicked();
+  boxArray[9].isClicked();
+  boxArray[10].isClicked();
+  boxArray[11].isClicked();
+  boxArray[12].isClicked();
+  boxArray[13].isClicked();
+  boxArray[14].isClicked();
+  boxArray[15].isClicked();
+};
+
 lines.forEach((element) => {
   element.addEventListener("click", () => {
     element.classList.add("clicked");
-    boxArray[0].isClicked();
+    boxesClicked();
   });
-});
-
-boxArray.forEach((element) => {
-  console.log(element.boxNumber + element.isClicked());
 });
 
 console.log(square1);

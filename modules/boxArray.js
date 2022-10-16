@@ -35,8 +35,9 @@ class Box {
       this.rightLine.classList.contains("clicked") &&
       this.bottomLine.classList.contains("clicked")
     ) {
+      console.log(`${this.squareName}: boxClosed`);
       this.square.classList.add("clicked");
-      return "boxClosed";
+      return;
     } else {
       return "boxOpen";
     }
