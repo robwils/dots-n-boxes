@@ -38,9 +38,15 @@ section{
     font-size: 7px;
 }
 
+.cell.clicked{
+    font-size: 7px;
+    background-color: blueviolet;
+}
+
+
 /* lines */
 
-.left-line, .top-left-dot, .bottom-left-dot {
+.left-line, .top-left-dot {
     background-color: aquamarine;
     width: 8px;
 }
@@ -59,6 +65,11 @@ section{
     width: 70px;
     height: 70px;
 }
+
+.square.clicked {
+    background-color: blueviolet;
+}
+
 
 /* dots */
 

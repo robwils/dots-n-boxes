@@ -25,14 +25,15 @@ reset.addEventListener("click", () => {
   console.log("reset");
 });
 
-// line status
-const lineStatus = [];
-
 lines.forEach((element) => {
   element.addEventListener("click", () => {
     element.classList.add("clicked");
-    console.log(boxArray[0].isClicked());
+    boxArray[0].isClicked();
   });
+});
+
+boxArray.forEach((element) => {
+  console.log(element.boxNumber + element.isClicked());
 });
 
 console.log(square1);
