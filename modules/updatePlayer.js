@@ -1,7 +1,7 @@
 import { currentScore } from "./updateScore.js";
 
 let currentPlayer = "playerOne";
-console.log(currentPlayer);
+console.log(`begin ${currentPlayer}`);
 
 // update player
 let updatePlayer = () => {

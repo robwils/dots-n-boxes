@@ -12,7 +12,7 @@ let updateScore = function (square, open) {
     return;
   } else {
     square.classList.add("clicked");
-
+    currentScore.rounds--;
     if (currentPlayer === "playerOne") {
       currentScore.playerOne++;
     } else {
