@@ -18,6 +18,7 @@ import {
 } from "./boxData.js";
 import { currentPlayer, updatePlayer } from "./updatePlayer.js";
 import { currentScore, updateScore } from "./updateScore.js";
+import updateBox from "./updateBox.js";
 
 // define box class
 class Box {
@@ -31,7 +32,7 @@ class Box {
     this.player;
     this.squareOpen = true;
   }
-  isClicked = function () {
+  isClicked = function (player) {
     if (
       this.leftLine.classList.contains("clicked") &&
       this.topLine.classList.contains("clicked") &&
@@ -39,7 +40,10 @@ class Box {
       this.bottomLine.classList.contains("clicked") &&
       this.squareOpen === true
     ) {
-      updateScore(this.square, this.squareOpen);
+      updateScore(this.square, this.squareOpen, this.player);
+      this.player = player;
+      updateBox(this.square, this.player);
+      console.log(`box taken by: ${this.player}`);
     }
   };
 }

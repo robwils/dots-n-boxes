@@ -4,7 +4,9 @@ let currentPlayer = "playerOne";
 console.log(`begin ${currentPlayer}`);
 
 // update player
-let updatePlayer = () => {
+let updatePlayer = (line) => {
+  line.classList.add(currentPlayer);
+
   if (currentScore.rounds % 2 === 0) {
     currentPlayer = "playerTwo";
   } else {

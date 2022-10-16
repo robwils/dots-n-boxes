@@ -9,7 +9,7 @@ section{
     background-color: white;
     width:70%;
     margin: auto;
-    height: 340px;
+    height: 470px;
     position: relative;
 }
 .game--container {
@@ -18,9 +18,10 @@ section{
     height: 320px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
     padding: 10px;
+    margin: 40px 0px ;
 }
 
 .box--container {
@@ -40,11 +41,16 @@ section{
     
 }
 
-
-.cell.clicked{
+.cell.playerOne{
     font-size: 7px;
     background-color: blueviolet;
 }
+
+.cell.playerTwo{
+    font-size: 7px;
+    background-color: grey;
+}
+
 
 
 /* lines */
@@ -73,9 +79,14 @@ section{
     height: 70px;
 }
 
-.square.clicked {
-    background-color: lightblue;
+.square.playerOne {
+    background-color: violet;
 }
+
+.square.playerTwo {
+    background-color: lightgray;
+}
+
 
 
 /* dots */

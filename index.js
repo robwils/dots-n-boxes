@@ -1,5 +1,4 @@
 import { boxArray, currentScore } from "./modules/boxArray.js";
-import { square1 } from "./modules/boxData.js";
 import { updatePlayer, currentPlayer } from "./modules/updatePlayer.js";
 // create prototype box object
 // create array of box objects and export as module
@@ -29,22 +28,22 @@ reset.addEventListener("click", () => {
 
 // check all boxes
 let boxesClicked = () => {
-  boxArray[0].isClicked();
-  boxArray[1].isClicked();
-  boxArray[2].isClicked();
-  boxArray[3].isClicked();
-  boxArray[4].isClicked();
-  boxArray[5].isClicked();
-  boxArray[6].isClicked();
-  boxArray[7].isClicked();
-  boxArray[8].isClicked();
-  boxArray[9].isClicked();
-  boxArray[10].isClicked();
-  boxArray[11].isClicked();
-  boxArray[12].isClicked();
-  boxArray[13].isClicked();
-  boxArray[14].isClicked();
-  boxArray[15].isClicked();
+  boxArray[0].isClicked(currentPlayer);
+  boxArray[1].isClicked(currentPlayer);
+  boxArray[2].isClicked(currentPlayer);
+  boxArray[3].isClicked(currentPlayer);
+  boxArray[4].isClicked(currentPlayer);
+  boxArray[5].isClicked(currentPlayer);
+  boxArray[6].isClicked(currentPlayer);
+  boxArray[7].isClicked(currentPlayer);
+  boxArray[8].isClicked(currentPlayer);
+  boxArray[9].isClicked(currentPlayer);
+  boxArray[10].isClicked(currentPlayer);
+  boxArray[11].isClicked(currentPlayer);
+  boxArray[12].isClicked(currentPlayer);
+  boxArray[13].isClicked(currentPlayer);
+  boxArray[14].isClicked(currentPlayer);
+  boxArray[15].isClicked(currentPlayer);
 };
 
 lines.forEach((element) => {
@@ -52,7 +51,7 @@ lines.forEach((element) => {
     element.classList.add("clicked");
     boxesClicked();
     currentScore.rounds++;
-    updatePlayer();
+    updatePlayer(element);
   });
 });
 

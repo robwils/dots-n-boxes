@@ -6,7 +6,7 @@ const currentScore = {
   playerTwo: 0,
 };
 
-let updateScore = function (square, open) {
+let updateScore = function (square, open, player) {
   if (square.classList.contains("clicked")) {
     open = false;
     return;
@@ -15,12 +15,12 @@ let updateScore = function (square, open) {
     currentScore.rounds--;
     if (currentPlayer === "playerOne") {
       currentScore.playerOne++;
+      console.log(currentScore);
     } else {
       currentScore.playerTwo++;
+      console.log(currentScore);
     }
   }
-
-  console.log(currentScore);
 };
 
 export { currentScore, updateScore };
