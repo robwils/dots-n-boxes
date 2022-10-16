@@ -1,17 +1,17 @@
-import { score } from "./updateScore.js";
+import { currentScore } from "./updateScore.js";
 
 let currentPlayer = "playerOne";
 console.log(currentPlayer);
 
 // update player
 let updatePlayer = () => {
-  if (score.rounds % 2 === 0) {
+  if (currentScore.rounds % 2 === 0) {
     currentPlayer = "playerTwo";
-    console.log(currentPlayer);
   } else {
     currentPlayer = "playerOne";
-    console.log(currentPlayer);
   }
+
+  console.log(`current player is: ${currentPlayer}`);
 };
 
-export { updatePlayer, currentPlayer };
+export { currentPlayer, updatePlayer };

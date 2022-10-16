@@ -1,11 +1,11 @@
-const score = {
+const currentScore = {
   rounds: 1,
   playerOne: 0,
   playerTwo: 0,
 };
 
 let updateScore = function () {
-  console.log("score");
+  currentScore.rounds--;
 };
 
-export { score, updateScore };
+export { currentScore, updateScore };

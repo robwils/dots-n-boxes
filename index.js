@@ -1,4 +1,4 @@
-import { boxArray, score } from "./modules/boxArray.js";
+import { boxArray, currentScore } from "./modules/boxArray.js";
 import { square1 } from "./modules/boxData.js";
 import { updatePlayer, currentPlayer } from "./modules/updatePlayer.js";
 // create prototype box object
@@ -51,8 +51,8 @@ lines.forEach((element) => {
   element.addEventListener("click", () => {
     element.classList.add("clicked");
     boxesClicked();
-    score.rounds++;
-    console.log(score.rounds);
+    currentScore.rounds++;
+    console.log(currentScore.rounds);
     updatePlayer();
   });
 });
