@@ -2,12 +2,13 @@ section{
     background-color: gray;
     text-align: center;
     border: solid 1px;
-    height: 100%;
+    height: 600px;
 }
 
 .outter--container {
     background-color: white;
-    width: 100%;
+    width:70%;
+    margin: auto;
     height: 340px;
     position: relative;
 }
@@ -36,7 +37,9 @@ section{
 
 .cell{
     font-size:5px;
+    
 }
+
 
 .cell.clicked{
     font-size: 7px;
@@ -45,6 +48,10 @@ section{
 
 
 /* lines */
+
+.left-line, .right-line, .bottom-line, .top-line:hover {
+    cursor:pointer;
+}
 
 .left-line, .top-left-dot {
     background-color: white;
