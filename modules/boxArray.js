@@ -29,23 +29,17 @@ class Box {
     this.bottomLine = bottomLine;
     this.square = square;
     this.player;
+    this.squareOpen = true;
   }
   isClicked = function () {
     if (
       this.leftLine.classList.contains("clicked") &&
       this.topLine.classList.contains("clicked") &&
       this.rightLine.classList.contains("clicked") &&
-      this.bottomLine.classList.contains("clicked")
+      this.bottomLine.classList.contains("clicked") &&
+      this.squareOpen === true
     ) {
-      console.log(`${this.squareName}: boxClosed`);
-      this.square.classList.add("clicked");
-      updateScore();
-      this.player = currentPlayer;
-      console.log(`${this.player} won`);
-
-      return;
-    } else {
-      return "boxOpen";
+      updateScore(this.square, this.squareOpen);
     }
   };
 }

@@ -52,12 +52,8 @@ lines.forEach((element) => {
     element.classList.add("clicked");
     boxesClicked();
     currentScore.rounds++;
-    console.log(currentScore.rounds);
     updatePlayer();
   });
 });
-
-console.log(square1);
-console.log(boxArray);
 
 export default currentPlayer;
